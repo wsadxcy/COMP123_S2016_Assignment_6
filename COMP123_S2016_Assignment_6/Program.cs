@@ -7,8 +7,8 @@ using System.Windows.Forms;
  * Date : Aug 5th, 2016
  * Date Modified: Aug 5th, 2016
  * Description : Assignment 6
- * Version : 0.1 - 
- *                  Change the name of the form to BMI Calculator
+ * Version : 0.2 - 
+ *                  Added Buttons
  */
 namespace COMP123_S2016_Assignment_6
 {
