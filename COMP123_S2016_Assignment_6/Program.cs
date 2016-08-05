@@ -3,7 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/* Author : Chenyuan Xie
+ * Date : Aug 5th, 2016
+ * Date Modified: Aug 5th, 2016
+ * Description : Assignment 6
+ * Version : 0.1 - 
+ *                  Change the name of the form to BMI Calculator
+ */
 namespace COMP123_S2016_Assignment_6
 {
     static class Program
@@ -16,7 +22,7 @@ namespace COMP123_S2016_Assignment_6
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1()); 
+            Application.Run(new BMI_Calculator()); 
         }
     }
 }
