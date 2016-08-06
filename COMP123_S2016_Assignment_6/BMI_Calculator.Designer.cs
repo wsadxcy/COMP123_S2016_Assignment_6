@@ -43,7 +43,6 @@
             this.Button7 = new System.Windows.Forms.Button();
             this.CalculateButton = new System.Windows.Forms.Button();
             this.EraceButton = new System.Windows.Forms.Button();
-            this.SwitchButton = new System.Windows.Forms.Button();
             this.HeightTextBox = new System.Windows.Forms.TextBox();
             this.WeightTextBox = new System.Windows.Forms.TextBox();
             this.MyHeight = new System.Windows.Forms.Label();
@@ -220,23 +219,13 @@
             // EraceButton
             // 
             this.EraceButton.BackColor = System.Drawing.Color.DarkCyan;
-            this.EraceButton.Location = new System.Drawing.Point(159, 167);
+            this.EraceButton.Location = new System.Drawing.Point(235, 218);
             this.EraceButton.Name = "EraceButton";
-            this.EraceButton.Size = new System.Drawing.Size(70, 42);
+            this.EraceButton.Size = new System.Drawing.Size(56, 104);
             this.EraceButton.TabIndex = 2;
             this.EraceButton.Text = "<-";
             this.EraceButton.UseVisualStyleBackColor = false;
             this.EraceButton.Click += new System.EventHandler(this.EraseButton_Click);
-            // 
-            // SwitchButton
-            // 
-            this.SwitchButton.BackColor = System.Drawing.Color.RoyalBlue;
-            this.SwitchButton.Location = new System.Drawing.Point(235, 218);
-            this.SwitchButton.Name = "SwitchButton";
-            this.SwitchButton.Size = new System.Drawing.Size(57, 104);
-            this.SwitchButton.TabIndex = 3;
-            this.SwitchButton.Text = "S";
-            this.SwitchButton.UseVisualStyleBackColor = false;
             // 
             // HeightTextBox
             // 
@@ -299,7 +288,7 @@
             // Metric
             // 
             this.Metric.AutoSize = true;
-            this.Metric.Location = new System.Drawing.Point(153, 13);
+            this.Metric.Location = new System.Drawing.Point(153, 61);
             this.Metric.Name = "Metric";
             this.Metric.Size = new System.Drawing.Size(126, 31);
             this.Metric.TabIndex = 10;
@@ -310,7 +299,7 @@
             // Imperial
             // 
             this.Imperial.AutoSize = true;
-            this.Imperial.Location = new System.Drawing.Point(153, 50);
+            this.Imperial.Location = new System.Drawing.Point(153, 24);
             this.Imperial.Name = "Imperial";
             this.Imperial.Size = new System.Drawing.Size(158, 31);
             this.Imperial.TabIndex = 11;
@@ -323,7 +312,7 @@
             this.ResultTextBox.BackColor = System.Drawing.Color.White;
             this.ResultTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ResultTextBox.Enabled = false;
-            this.ResultTextBox.Location = new System.Drawing.Point(153, 127);
+            this.ResultTextBox.Location = new System.Drawing.Point(150, 178);
             this.ResultTextBox.Name = "ResultTextBox";
             this.ResultTextBox.Size = new System.Drawing.Size(139, 34);
             this.ResultTextBox.TabIndex = 12;
@@ -331,7 +320,7 @@
             // Result
             // 
             this.Result.AutoSize = true;
-            this.Result.Location = new System.Drawing.Point(171, 97);
+            this.Result.Location = new System.Drawing.Point(171, 139);
             this.Result.Name = "Result";
             this.Result.Size = new System.Drawing.Size(108, 27);
             this.Result.TabIndex = 13;
@@ -352,7 +341,6 @@
             this.Controls.Add(this.MyHeight);
             this.Controls.Add(this.WeightTextBox);
             this.Controls.Add(this.HeightTextBox);
-            this.Controls.Add(this.SwitchButton);
             this.Controls.Add(this.EraceButton);
             this.Controls.Add(this.CalculateButton);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -387,7 +375,6 @@
         private System.Windows.Forms.Button Button7;
         private System.Windows.Forms.Button CalculateButton;
         private System.Windows.Forms.Button EraceButton;
-        private System.Windows.Forms.Button SwitchButton;
         private System.Windows.Forms.TextBox HeightTextBox;
         private System.Windows.Forms.TextBox WeightTextBox;
         private System.Windows.Forms.Label MyHeight;
