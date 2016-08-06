@@ -52,6 +52,8 @@
             this.BMILable = new System.Windows.Forms.Label();
             this.Metric = new System.Windows.Forms.RadioButton();
             this.Imperial = new System.Windows.Forms.RadioButton();
+            this.ResultTextBox = new System.Windows.Forms.TextBox();
+            this.Result = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -316,11 +318,32 @@
             this.Imperial.Text = "Imperial";
             this.Imperial.UseVisualStyleBackColor = true;
             // 
+            // ResultTextBox
+            // 
+            this.ResultTextBox.BackColor = System.Drawing.Color.White;
+            this.ResultTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ResultTextBox.Enabled = false;
+            this.ResultTextBox.Location = new System.Drawing.Point(153, 127);
+            this.ResultTextBox.Name = "ResultTextBox";
+            this.ResultTextBox.Size = new System.Drawing.Size(139, 34);
+            this.ResultTextBox.TabIndex = 12;
+            // 
+            // Result
+            // 
+            this.Result.AutoSize = true;
+            this.Result.Location = new System.Drawing.Point(171, 97);
+            this.Result.Name = "Result";
+            this.Result.Size = new System.Drawing.Size(108, 27);
+            this.Result.TabIndex = 13;
+            this.Result.Text = "Result";
+            // 
             // BMI_Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(304, 441);
+            this.Controls.Add(this.Result);
+            this.Controls.Add(this.ResultTextBox);
             this.Controls.Add(this.Imperial);
             this.Controls.Add(this.Metric);
             this.Controls.Add(this.BMILable);
@@ -373,6 +396,8 @@
         private System.Windows.Forms.Label BMILable;
         private System.Windows.Forms.RadioButton Metric;
         private System.Windows.Forms.RadioButton Imperial;
+        private System.Windows.Forms.TextBox ResultTextBox;
+        private System.Windows.Forms.Label Result;
     }
 }
 

@@ -33,6 +33,15 @@ namespace COMP123_S2016_Assignment_6
                 // and tell c-sharp that it is a button
                 Button buttonClicked = (Button)sender;
 
+                if (String.Equals(HeightTextBox.Text, "0"))
+                {
+                    HeightTextBox.Clear();
+                }
+                if (String.Equals(WeightTextBox.Text, "0"))
+                {
+                    WeightTextBox.Clear();
+                }
+
                 if (TextBoxFocus == true)
                 {
 
@@ -114,6 +123,22 @@ namespace COMP123_S2016_Assignment_6
                 }
                 else
                 {
+                    if(result < 18.5)
+                    {
+                        ResultTextBox.Text = "Underweight";
+                    }
+                    else if(result >= 18.5 && result < 24.9)
+                    {
+                        ResultTextBox.Text = "Normal";
+                    }
+                    else if(result >= 24.9 && result < 30)
+                    {
+                        ResultTextBox.Text = "Overweight";
+                    }
+                    else if(result >= 30)
+                    {
+                        ResultTextBox.Text = "Obese";
+                    }
                     BMITextBox.Text = result.ToString();
                 }
 
@@ -125,13 +150,28 @@ namespace COMP123_S2016_Assignment_6
         {
             if (TextBoxFocus == true)
             {
-                HeightTextBox.Text = HeightTextBox.Text.Remove(HeightTextBox.Text.Length - 1);
+                if (HeightTextBox.Text.Length == 1)
+                {
+                    HeightTextBox.Text = "0";
+                }
+                else if (HeightTextBox.Text.Length > 1)
+                {
+                    HeightTextBox.Text = HeightTextBox.Text.Remove(HeightTextBox.Text.Length - 1);
+                }
+                
 
             }
             else if (TextBoxFocus == false)
             {
 
-                WeightTextBox.Text = WeightTextBox.Text.Remove(WeightTextBox.Text.Length - 1);
+                if (WeightTextBox.Text.Length == 1)
+                {
+                    WeightTextBox.Text = "0";
+                }
+                else if (WeightTextBox.Text.Length > 1)
+                {
+                    WeightTextBox.Text = WeightTextBox.Text.Remove(WeightTextBox.Text.Length - 1);
+                }
             }
         }
 
