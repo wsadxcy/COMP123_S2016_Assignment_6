@@ -15,6 +15,11 @@ namespace COMP123_S2016_Assignment_6
     {
         public bool TextBoxFocus { get; set; }
 
+        public string My_Height { get; set; }
+        public string My_Weight { get; set; }
+
+        public bool ActiveError { get; set; }
+
         public BMI_Calculator()
         {
             InitializeComponent();
@@ -22,29 +27,32 @@ namespace COMP123_S2016_Assignment_6
 
         private void BMI_CalculatorButton_Click(object sender, EventArgs e)
         {
-            
-
-
-            // create a reference to the sender object 
-            // and tell c-sharp that it is a button
-            Button buttonClicked = (Button)sender;
-
-            if (TextBoxFocus == true)
+            if (this.ActiveError == false)
             {
-                
-                string HeightResult = HeightTextBox.Text;// read the string in the TextBox
-                HeightResult += buttonClicked.Text;// add the text of the button clicked to the currentResult
-                HeightTextBox.Text = HeightResult;// update the ResultTextBox
-                this.ActiveControl = HeightTextBox;
+                // create a reference to the sender object 
+                // and tell c-sharp that it is a button
+                Button buttonClicked = (Button)sender;
+
+                if (TextBoxFocus == true)
+                {
+
+                    string HeightResult = HeightTextBox.Text;// read the string in the TextBox
+                    HeightResult += buttonClicked.Text;// add the text of the button clicked to the currentResult
+                    HeightTextBox.Text = HeightResult;// update the ResultTextBox
+                    this.ActiveControl = HeightTextBox;
+                }
+                else if (TextBoxFocus == false)
+                {
+
+                    string WeightResult = WeightTextBox.Text;// read the string in the TextBox
+                    WeightResult += buttonClicked.Text;// add the text of the button clicked to the currentResult
+                    WeightTextBox.Text = WeightResult;// update the ResultTextBox
+                    this.ActiveControl = WeightTextBox;
+                }
             }
-            else if(TextBoxFocus == false)
-            {
+
+
                 
-                string WeightResult = WeightTextBox.Text;// read the string in the TextBox
-                WeightResult += buttonClicked.Text;// add the text of the button clicked to the currentResult
-                WeightTextBox.Text = WeightResult;// update the ResultTextBox
-                this.ActiveControl = WeightTextBox;
-            }
             
         }
 
@@ -68,14 +76,71 @@ namespace COMP123_S2016_Assignment_6
 
         private void CalculateButton_Click(object sender, EventArgs e)
         {
-            int firstNumber = 0;
-            int secondNumber = 0;
-            int result = 0;
+            if (this.ActiveError == false)
+            {
+                double firstNumber = 0;
+                double secondNumber = 0;
+                double result = 0;
+                bool divisionByZero = false;
 
+                this.My_Height = HeightTextBox.Text;
+                this.My_Weight = WeightTextBox.Text;
+
+                firstNumber = Convert.ToDouble(this.My_Height);
+
+
+                secondNumber = Convert.ToDouble(this.My_Weight);
+
+                if (firstNumber == 0)
+                {
+                    divisionByZero = true;
+                }
+                else
+                {
+                    if (Metric.Checked == true)
+                    {
+                        result = secondNumber / (firstNumber * firstNumber);
+                    }
+                    else if (Imperial.Checked == true)
+                    {
+                        result = (secondNumber * 703) / (firstNumber * firstNumber);
+                    }
+                }
+
+                if (divisionByZero)
+                {
+                    BMITextBox.Text = "DIV by Zero";
+                    this.ActiveError = true;
+                }
+                else
+                {
+                    BMITextBox.Text = result.ToString();
+                }
+
+                
+            }
         }
 
+        private void EraseButton_Click(object sender, EventArgs e)
+        {
+            if (TextBoxFocus == true)
+            {
+                HeightTextBox.Text = HeightTextBox.Text.Remove(HeightTextBox.Text.Length - 1);
 
+            }
+            else if (TextBoxFocus == false)
+            {
 
+                WeightTextBox.Text = WeightTextBox.Text.Remove(WeightTextBox.Text.Length - 1);
+            }
+        }
 
+        private void ResetButton_Click(object sender, EventArgs e)
+        {
+            HeightTextBox.Text = "0";
+            WeightTextBox.Text = "0";
+            
+            this.ActiveError = false;
+        }
     }
 }

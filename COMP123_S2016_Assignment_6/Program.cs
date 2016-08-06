@@ -8,7 +8,7 @@ using System.Windows.Forms;
  * Date Modified: Aug 5th, 2016
  * Description : Assignment 6
  * Version : 0.3 - 
- *                  Added numbers
+ *                  Added most functions
  */
 namespace COMP123_S2016_Assignment_6
 {

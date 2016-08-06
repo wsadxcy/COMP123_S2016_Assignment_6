@@ -50,6 +50,8 @@
             this.MyWeight = new System.Windows.Forms.Label();
             this.BMITextBox = new System.Windows.Forms.TextBox();
             this.BMILable = new System.Windows.Forms.Label();
+            this.Metric = new System.Windows.Forms.RadioButton();
+            this.Imperial = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,6 +91,7 @@
             this.DotButton.TabIndex = 11;
             this.DotButton.Text = ".";
             this.DotButton.UseVisualStyleBackColor = true;
+            this.DotButton.Click += new System.EventHandler(this.BMI_CalculatorButton_Click);
             // 
             // Button0
             // 
@@ -109,6 +112,7 @@
             this.ResetButton.TabIndex = 9;
             this.ResetButton.Text = "R";
             this.ResetButton.UseVisualStyleBackColor = false;
+            this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
             // 
             // Button3
             // 
@@ -220,6 +224,7 @@
             this.EraceButton.TabIndex = 2;
             this.EraceButton.Text = "<-";
             this.EraceButton.UseVisualStyleBackColor = false;
+            this.EraceButton.Click += new System.EventHandler(this.EraseButton_Click);
             // 
             // SwitchButton
             // 
@@ -289,11 +294,35 @@
             this.BMILable.TabIndex = 9;
             this.BMILable.Text = "BMI";
             // 
+            // Metric
+            // 
+            this.Metric.AutoSize = true;
+            this.Metric.Location = new System.Drawing.Point(153, 13);
+            this.Metric.Name = "Metric";
+            this.Metric.Size = new System.Drawing.Size(126, 31);
+            this.Metric.TabIndex = 10;
+            this.Metric.TabStop = true;
+            this.Metric.Text = "Metric";
+            this.Metric.UseVisualStyleBackColor = true;
+            // 
+            // Imperial
+            // 
+            this.Imperial.AutoSize = true;
+            this.Imperial.Location = new System.Drawing.Point(153, 50);
+            this.Imperial.Name = "Imperial";
+            this.Imperial.Size = new System.Drawing.Size(158, 31);
+            this.Imperial.TabIndex = 11;
+            this.Imperial.TabStop = true;
+            this.Imperial.Text = "Imperial";
+            this.Imperial.UseVisualStyleBackColor = true;
+            // 
             // BMI_Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(304, 441);
+            this.Controls.Add(this.Imperial);
+            this.Controls.Add(this.Metric);
             this.Controls.Add(this.BMILable);
             this.Controls.Add(this.BMITextBox);
             this.Controls.Add(this.MyWeight);
@@ -342,6 +371,8 @@
         private System.Windows.Forms.Label MyWeight;
         private System.Windows.Forms.TextBox BMITextBox;
         private System.Windows.Forms.Label BMILable;
+        private System.Windows.Forms.RadioButton Metric;
+        private System.Windows.Forms.RadioButton Imperial;
     }
 }
 
