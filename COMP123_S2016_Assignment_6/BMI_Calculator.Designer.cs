@@ -29,21 +29,27 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.DotButton = new System.Windows.Forms.Button();
+            this.Button0 = new System.Windows.Forms.Button();
             this.ResetButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
+            this.Button3 = new System.Windows.Forms.Button();
+            this.Button2 = new System.Windows.Forms.Button();
+            this.Button1 = new System.Windows.Forms.Button();
+            this.Button6 = new System.Windows.Forms.Button();
+            this.Button5 = new System.Windows.Forms.Button();
+            this.Button4 = new System.Windows.Forms.Button();
+            this.Button9 = new System.Windows.Forms.Button();
+            this.Button8 = new System.Windows.Forms.Button();
+            this.Button7 = new System.Windows.Forms.Button();
+            this.CalculateButton = new System.Windows.Forms.Button();
+            this.EraceButton = new System.Windows.Forms.Button();
+            this.SwitchButton = new System.Windows.Forms.Button();
+            this.HeightTextBox = new System.Windows.Forms.TextBox();
+            this.WeightTextBox = new System.Windows.Forms.TextBox();
+            this.MyHeight = new System.Windows.Forms.Label();
+            this.MyWeight = new System.Windows.Forms.Label();
+            this.BMITextBox = new System.Windows.Forms.TextBox();
+            this.BMILable = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,18 +59,18 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Controls.Add(this.button11, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.button10, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.button9, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.button8, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.button7, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.button6, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.button5, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button4, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button3, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button2, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.ResetButton, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.DotButton, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.Button0, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.ResetButton, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.Button3, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.Button2, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.Button1, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.Button6, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.Button5, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.Button4, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.Button9, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.Button8, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.Button7, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 218);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
@@ -75,149 +81,228 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(217, 222);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
+            // DotButton
+            // 
+            this.DotButton.Location = new System.Drawing.Point(147, 168);
+            this.DotButton.Name = "DotButton";
+            this.DotButton.Size = new System.Drawing.Size(67, 49);
+            this.DotButton.TabIndex = 11;
+            this.DotButton.Text = ".";
+            this.DotButton.UseVisualStyleBackColor = true;
+            // 
+            // Button0
+            // 
+            this.Button0.Location = new System.Drawing.Point(75, 168);
+            this.Button0.Name = "Button0";
+            this.Button0.Size = new System.Drawing.Size(66, 49);
+            this.Button0.TabIndex = 10;
+            this.Button0.Text = "0";
+            this.Button0.UseVisualStyleBackColor = true;
+            this.Button0.Click += new System.EventHandler(this.BMI_CalculatorButton_Click);
+            // 
             // ResetButton
             // 
-            this.ResetButton.Location = new System.Drawing.Point(3, 3);
+            this.ResetButton.BackColor = System.Drawing.Color.Crimson;
+            this.ResetButton.Location = new System.Drawing.Point(3, 168);
             this.ResetButton.Name = "ResetButton";
             this.ResetButton.Size = new System.Drawing.Size(66, 49);
-            this.ResetButton.TabIndex = 0;
-            this.ResetButton.Text = "7";
-            this.ResetButton.UseVisualStyleBackColor = true;
+            this.ResetButton.TabIndex = 9;
+            this.ResetButton.Text = "R";
+            this.ResetButton.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // Button3
             // 
-            this.button1.Location = new System.Drawing.Point(75, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(66, 49);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "8";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Button3.Location = new System.Drawing.Point(147, 113);
+            this.Button3.Name = "Button3";
+            this.Button3.Size = new System.Drawing.Size(67, 49);
+            this.Button3.TabIndex = 8;
+            this.Button3.Text = "3";
+            this.Button3.UseVisualStyleBackColor = true;
+            this.Button3.Click += new System.EventHandler(this.BMI_CalculatorButton_Click);
             // 
-            // button2
+            // Button2
             // 
-            this.button2.Location = new System.Drawing.Point(147, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(67, 49);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "9";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Button2.Location = new System.Drawing.Point(75, 113);
+            this.Button2.Name = "Button2";
+            this.Button2.Size = new System.Drawing.Size(66, 49);
+            this.Button2.TabIndex = 7;
+            this.Button2.Text = "2";
+            this.Button2.UseVisualStyleBackColor = true;
+            this.Button2.Click += new System.EventHandler(this.BMI_CalculatorButton_Click);
             // 
-            // button3
+            // Button1
             // 
-            this.button3.Location = new System.Drawing.Point(3, 58);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(66, 49);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "4";
-            this.button3.UseVisualStyleBackColor = true;
+            this.Button1.Location = new System.Drawing.Point(3, 113);
+            this.Button1.Name = "Button1";
+            this.Button1.Size = new System.Drawing.Size(66, 49);
+            this.Button1.TabIndex = 6;
+            this.Button1.Text = "1";
+            this.Button1.UseVisualStyleBackColor = true;
+            this.Button1.Click += new System.EventHandler(this.BMI_CalculatorButton_Click);
             // 
-            // button4
+            // Button6
             // 
-            this.button4.Location = new System.Drawing.Point(75, 58);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(66, 49);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "5";
-            this.button4.UseVisualStyleBackColor = true;
+            this.Button6.Location = new System.Drawing.Point(147, 58);
+            this.Button6.Name = "Button6";
+            this.Button6.Size = new System.Drawing.Size(67, 49);
+            this.Button6.TabIndex = 5;
+            this.Button6.Text = "6";
+            this.Button6.UseVisualStyleBackColor = true;
+            this.Button6.Click += new System.EventHandler(this.BMI_CalculatorButton_Click);
             // 
-            // button5
+            // Button5
             // 
-            this.button5.Location = new System.Drawing.Point(147, 58);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(67, 49);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "6";
-            this.button5.UseVisualStyleBackColor = true;
+            this.Button5.Location = new System.Drawing.Point(75, 58);
+            this.Button5.Name = "Button5";
+            this.Button5.Size = new System.Drawing.Size(66, 49);
+            this.Button5.TabIndex = 4;
+            this.Button5.Text = "5";
+            this.Button5.UseVisualStyleBackColor = true;
+            this.Button5.Click += new System.EventHandler(this.BMI_CalculatorButton_Click);
             // 
-            // button6
+            // Button4
             // 
-            this.button6.Location = new System.Drawing.Point(3, 113);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(66, 49);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "1";
-            this.button6.UseVisualStyleBackColor = true;
+            this.Button4.Location = new System.Drawing.Point(3, 58);
+            this.Button4.Name = "Button4";
+            this.Button4.Size = new System.Drawing.Size(66, 49);
+            this.Button4.TabIndex = 3;
+            this.Button4.Text = "4";
+            this.Button4.UseVisualStyleBackColor = true;
+            this.Button4.Click += new System.EventHandler(this.BMI_CalculatorButton_Click);
             // 
-            // button7
+            // Button9
             // 
-            this.button7.Location = new System.Drawing.Point(75, 113);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(66, 49);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "2";
-            this.button7.UseVisualStyleBackColor = true;
+            this.Button9.Location = new System.Drawing.Point(147, 3);
+            this.Button9.Name = "Button9";
+            this.Button9.Size = new System.Drawing.Size(67, 49);
+            this.Button9.TabIndex = 2;
+            this.Button9.Text = "9";
+            this.Button9.UseVisualStyleBackColor = true;
+            this.Button9.Click += new System.EventHandler(this.BMI_CalculatorButton_Click);
             // 
-            // button8
+            // Button8
             // 
-            this.button8.Location = new System.Drawing.Point(147, 113);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(67, 49);
-            this.button8.TabIndex = 8;
-            this.button8.Text = "3";
-            this.button8.UseVisualStyleBackColor = true;
+            this.Button8.Location = new System.Drawing.Point(75, 3);
+            this.Button8.Name = "Button8";
+            this.Button8.Size = new System.Drawing.Size(66, 49);
+            this.Button8.TabIndex = 1;
+            this.Button8.Text = "8";
+            this.Button8.UseVisualStyleBackColor = true;
+            this.Button8.Click += new System.EventHandler(this.BMI_CalculatorButton_Click);
             // 
-            // button9
+            // Button7
             // 
-            this.button9.Location = new System.Drawing.Point(3, 168);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(66, 49);
-            this.button9.TabIndex = 9;
-            this.button9.Text = "R";
-            this.button9.UseVisualStyleBackColor = true;
+            this.Button7.Location = new System.Drawing.Point(3, 3);
+            this.Button7.Name = "Button7";
+            this.Button7.Size = new System.Drawing.Size(66, 49);
+            this.Button7.TabIndex = 0;
+            this.Button7.Text = "7";
+            this.Button7.UseVisualStyleBackColor = true;
+            this.Button7.Click += new System.EventHandler(this.BMI_CalculatorButton_Click);
             // 
-            // button10
+            // CalculateButton
             // 
-            this.button10.Location = new System.Drawing.Point(75, 168);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(66, 49);
-            this.button10.TabIndex = 10;
-            this.button10.Text = "0";
-            this.button10.UseVisualStyleBackColor = true;
+            this.CalculateButton.BackColor = System.Drawing.Color.RoyalBlue;
+            this.CalculateButton.Location = new System.Drawing.Point(235, 328);
+            this.CalculateButton.Name = "CalculateButton";
+            this.CalculateButton.Size = new System.Drawing.Size(57, 109);
+            this.CalculateButton.TabIndex = 1;
+            this.CalculateButton.Text = "=";
+            this.CalculateButton.UseVisualStyleBackColor = false;
+            this.CalculateButton.Click += new System.EventHandler(this.CalculateButton_Click);
             // 
-            // button11
+            // EraceButton
             // 
-            this.button11.Location = new System.Drawing.Point(147, 168);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(67, 49);
-            this.button11.TabIndex = 11;
-            this.button11.Text = ".";
-            this.button11.UseVisualStyleBackColor = true;
+            this.EraceButton.BackColor = System.Drawing.Color.DarkCyan;
+            this.EraceButton.Location = new System.Drawing.Point(159, 167);
+            this.EraceButton.Name = "EraceButton";
+            this.EraceButton.Size = new System.Drawing.Size(70, 42);
+            this.EraceButton.TabIndex = 2;
+            this.EraceButton.Text = "<-";
+            this.EraceButton.UseVisualStyleBackColor = false;
             // 
-            // button12
+            // SwitchButton
             // 
-            this.button12.Location = new System.Drawing.Point(235, 331);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(57, 109);
-            this.button12.TabIndex = 1;
-            this.button12.Text = "=";
-            this.button12.UseVisualStyleBackColor = true;
+            this.SwitchButton.BackColor = System.Drawing.Color.RoyalBlue;
+            this.SwitchButton.Location = new System.Drawing.Point(235, 218);
+            this.SwitchButton.Name = "SwitchButton";
+            this.SwitchButton.Size = new System.Drawing.Size(57, 104);
+            this.SwitchButton.TabIndex = 3;
+            this.SwitchButton.Text = "S";
+            this.SwitchButton.UseVisualStyleBackColor = false;
             // 
-            // button13
+            // HeightTextBox
             // 
-            this.button13.Location = new System.Drawing.Point(159, 170);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(70, 42);
-            this.button13.TabIndex = 2;
-            this.button13.Text = "<-";
-            this.button13.UseVisualStyleBackColor = true;
+            this.HeightTextBox.BackColor = System.Drawing.Color.White;
+            this.HeightTextBox.Location = new System.Drawing.Point(6, 39);
+            this.HeightTextBox.Name = "HeightTextBox";
+            this.HeightTextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.HeightTextBox.Size = new System.Drawing.Size(141, 34);
+            this.HeightTextBox.TabIndex = 4;
+            this.HeightTextBox.Click += new System.EventHandler(this.TextBoxFocusChange);
+            this.HeightTextBox.TextChanged += new System.EventHandler(this.TextBoxFocusChange);
             // 
-            // button14
+            // WeightTextBox
             // 
-            this.button14.Location = new System.Drawing.Point(235, 221);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(57, 104);
-            this.button14.TabIndex = 3;
-            this.button14.Text = "S";
-            this.button14.UseVisualStyleBackColor = true;
+            this.WeightTextBox.BackColor = System.Drawing.Color.White;
+            this.WeightTextBox.Location = new System.Drawing.Point(6, 106);
+            this.WeightTextBox.Name = "WeightTextBox";
+            this.WeightTextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.WeightTextBox.Size = new System.Drawing.Size(138, 34);
+            this.WeightTextBox.TabIndex = 5;
+            this.WeightTextBox.Click += new System.EventHandler(this.TextBoxFocusChange);
+            // 
+            // MyHeight
+            // 
+            this.MyHeight.AutoSize = true;
+            this.MyHeight.Location = new System.Drawing.Point(1, 9);
+            this.MyHeight.Name = "MyHeight";
+            this.MyHeight.Size = new System.Drawing.Size(156, 27);
+            this.MyHeight.TabIndex = 6;
+            this.MyHeight.Text = "My Height";
+            // 
+            // MyWeight
+            // 
+            this.MyWeight.AutoSize = true;
+            this.MyWeight.Location = new System.Drawing.Point(1, 76);
+            this.MyWeight.Name = "MyWeight";
+            this.MyWeight.Size = new System.Drawing.Size(156, 27);
+            this.MyWeight.TabIndex = 7;
+            this.MyWeight.Text = "My Weight";
+            // 
+            // BMITextBox
+            // 
+            this.BMITextBox.BackColor = System.Drawing.Color.White;
+            this.BMITextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.BMITextBox.Enabled = false;
+            this.BMITextBox.Location = new System.Drawing.Point(6, 178);
+            this.BMITextBox.Name = "BMITextBox";
+            this.BMITextBox.Size = new System.Drawing.Size(138, 34);
+            this.BMITextBox.TabIndex = 8;
+            // 
+            // BMILable
+            // 
+            this.BMILable.AutoSize = true;
+            this.BMILable.Location = new System.Drawing.Point(1, 148);
+            this.BMILable.Name = "BMILable";
+            this.BMILable.Size = new System.Drawing.Size(60, 27);
+            this.BMILable.TabIndex = 9;
+            this.BMILable.Text = "BMI";
             // 
             // BMI_Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(304, 441);
-            this.Controls.Add(this.button14);
-            this.Controls.Add(this.button13);
-            this.Controls.Add(this.button12);
+            this.Controls.Add(this.BMILable);
+            this.Controls.Add(this.BMITextBox);
+            this.Controls.Add(this.MyWeight);
+            this.Controls.Add(this.MyHeight);
+            this.Controls.Add(this.WeightTextBox);
+            this.Controls.Add(this.HeightTextBox);
+            this.Controls.Add(this.SwitchButton);
+            this.Controls.Add(this.EraceButton);
+            this.Controls.Add(this.CalculateButton);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Lucida Console", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -226,29 +311,37 @@
             this.Name = "BMI_Calculator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BMI Calculator";
+            this.Load += new System.EventHandler(this.BMI_Calculator_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button DotButton;
+        private System.Windows.Forms.Button Button0;
         private System.Windows.Forms.Button ResetButton;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button Button3;
+        private System.Windows.Forms.Button Button2;
+        private System.Windows.Forms.Button Button1;
+        private System.Windows.Forms.Button Button6;
+        private System.Windows.Forms.Button Button5;
+        private System.Windows.Forms.Button Button4;
+        private System.Windows.Forms.Button Button9;
+        private System.Windows.Forms.Button Button8;
+        private System.Windows.Forms.Button Button7;
+        private System.Windows.Forms.Button CalculateButton;
+        private System.Windows.Forms.Button EraceButton;
+        private System.Windows.Forms.Button SwitchButton;
+        private System.Windows.Forms.TextBox HeightTextBox;
+        private System.Windows.Forms.TextBox WeightTextBox;
+        private System.Windows.Forms.Label MyHeight;
+        private System.Windows.Forms.Label MyWeight;
+        private System.Windows.Forms.TextBox BMITextBox;
+        private System.Windows.Forms.Label BMILable;
     }
 }
 

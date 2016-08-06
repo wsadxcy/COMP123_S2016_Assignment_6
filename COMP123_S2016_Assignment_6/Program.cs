@@ -7,8 +7,8 @@ using System.Windows.Forms;
  * Date : Aug 5th, 2016
  * Date Modified: Aug 5th, 2016
  * Description : Assignment 6
- * Version : 0.2 - 
- *                  Added Buttons
+ * Version : 0.3 - 
+ *                  Added numbers
  */
 namespace COMP123_S2016_Assignment_6
 {
